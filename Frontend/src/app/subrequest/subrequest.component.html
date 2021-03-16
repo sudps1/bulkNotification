@@ -1,0 +1,24 @@
+<div class="container">
+    <div *ngFor='let studre of studreq'>
+      
+      <div class="card">    
+        <h5 class="card-header" style="text-align: center;">Hurrah...Your order for {{ studre.title }} has taken..</h5>
+        <div class="row">
+        
+        <div class="col-md-12 col-sm-9 text-justify">
+        <div class="card-body">
+          <p class="card-text"> <b>Ordered Item : </b> {{ studre.studemail }}</p>
+          <p class="card-text"><b>Quantity : </b>  {{ studre.profemail }}</p>
+          <p class="card-text"><b>Served at room no. :</b>  {{ studre.status }}</p>
+          <button class="btn btn-success" style="cursor:pointer" *ngIf="_auth.loggedIn()"(click)="Approve(studre)"style="margin-left: 10px;"> Approve</button>
+          <button class="btn btn-danger" style="cursor:pointer" *ngIf="_auth.loggedIn()"(click)="Reject(studre)"style="margin-left: 10px;"> Reject</button>
+
+         
+        </div>
+      </div>
+        </div>
+      
+      </div>
+      <hr>
+    </div>
+    </div>
